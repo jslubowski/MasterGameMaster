@@ -14,6 +14,10 @@ namespace MasterGameMaster.API.Extensions
         public static IServiceCollection ConfigureCors(this IServiceCollection services, IConfiguration configuration) 
         {
             var frontendBaseUri = configuration.GetValue<string>("FrontendUrl");
+
+            if (frontendBaseUri is null)
+               throw new ArgumentNullException(nameof(frontendBaseUri));
+
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(builder => {

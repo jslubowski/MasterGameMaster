@@ -4,12 +4,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.API", "MasterGameMaster.API\MasterGameMaster.API.csproj", "{A4B649BB-3F3F-4604-8C8E-903B9260C449}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09931802-8876-486E-9344-0192472750CA} = {09931802-8876-486E-9344-0192472750CA}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterGameMaster.Domain", "MasterGameMaster.Domain\MasterGameMaster.Domain.csproj", "{475688E9-6472-4BE4-8FAD-4FD64A002CB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.Domain", "MasterGameMaster.Domain\MasterGameMaster.Domain.csproj", "{475688E9-6472-4BE4-8FAD-4FD64A002CB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterGameMaster.Infrastructure", "MasterGameMaster.Infrastructure\MasterGameMaster.Infrastructure.csproj", "{09931802-8876-486E-9344-0192472750CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.Infrastructure", "MasterGameMaster.Infrastructure\MasterGameMaster.Infrastructure.csproj", "{09931802-8876-486E-9344-0192472750CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterGameMaster.Application", "MasterGameMaster.Application\MasterGameMaster.Application.csproj", "{A5FB91D1-2561-4097-BB82-585C40F649F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.Application", "MasterGameMaster.Application\MasterGameMaster.Application.csproj", "{A5FB91D1-2561-4097-BB82-585C40F649F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,8 @@
 using MasterGameMaster.API.Extensions;
+using MasterGameMaster.Infrastructure.Contexts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices();
 builder.Services.ConfigureCors(builder.Configuration);
+builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
 
 var app = builder.Build();
 
