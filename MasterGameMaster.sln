@@ -6,13 +6,21 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.API", "MasterGameMaster.API\MasterGameMaster.API.csproj", "{A4B649BB-3F3F-4604-8C8E-903B9260C449}"
 	ProjectSection(ProjectDependencies) = postProject
 		{09931802-8876-486E-9344-0192472750CA} = {09931802-8876-486E-9344-0192472750CA}
+		{475688E9-6472-4BE4-8FAD-4FD64A002CB0} = {475688E9-6472-4BE4-8FAD-4FD64A002CB0}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.Domain", "MasterGameMaster.Domain\MasterGameMaster.Domain.csproj", "{475688E9-6472-4BE4-8FAD-4FD64A002CB0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.Infrastructure", "MasterGameMaster.Infrastructure\MasterGameMaster.Infrastructure.csproj", "{09931802-8876-486E-9344-0192472750CA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{475688E9-6472-4BE4-8FAD-4FD64A002CB0} = {475688E9-6472-4BE4-8FAD-4FD64A002CB0}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterGameMaster.Application", "MasterGameMaster.Application\MasterGameMaster.Application.csproj", "{A5FB91D1-2561-4097-BB82-585C40F649F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09931802-8876-486E-9344-0192472750CA} = {09931802-8876-486E-9344-0192472750CA}
+		{475688E9-6472-4BE4-8FAD-4FD64A002CB0} = {475688E9-6472-4BE4-8FAD-4FD64A002CB0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,6 @@
 using MasterGameMaster.API.Extensions;
 using MasterGameMaster.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,10 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddApplicationServices();
 builder.Services.ConfigureCors(builder.Configuration);
 builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
+builder.Services.AddApplicationServices();
+builder.Services.AddIdentityServices(builder.Configuration);
 
 var app = builder.Build();
 
